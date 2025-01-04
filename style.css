@@ -3,13 +3,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #EFECE7;
+    background-color: #6846ff;
 }
 
 header {
     padding: 20px;
     display: flex;
-    background-color: #CDCAC5;
+    background-color: #6846ff;
     justify-content: space-between;
     align-items: center;
 }
@@ -27,7 +27,7 @@ header {
 
 
 nav {
-    background-color: #ffffff;
+    background-color: #6846ff;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -35,13 +35,13 @@ nav {
 }
 
 nav button {
-  --bg: #000;
+  --bg: #f8f6f6;
   --hover-bg: #ff90e8;
   --hover-text: #000;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   border: 1px solid var(--bg);
-  border-radius: 4px;
+  border-radius: 50px;
   padding: 0.8em 2em;
   margin: auto;
   background: var(--bg);
@@ -78,7 +78,7 @@ main {
 
 /* Стиль для контенту */
 .text-content {
-    background-color: #dad7d3;
+    background-color: #6846ff;
     padding: 20px;
     border-radius: 5px;
     margin: 0;
@@ -98,22 +98,24 @@ main {
 
 /* Стиль для sidebar */
 .sidebar {
+    background-color: #6846ff;
     width: 200px;
     display: flex;
     flex-direction: column;
     margin-right: 20px;
+    
 }
 
 .sidebar button {
-    --bg: #000;
+    --bg: #f8f6f6;
   --hover-bg: #ff90e8;
   --hover-text: #000;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   border: 1px solid var(--bg);
-  border-radius: 4px;
+  border-radius: 25px;
   padding: 0.8em 2em;
-  margin: auto;
+  margin: 10px 0;
   background: var(--bg);
   transition: 0.2s;
 }
