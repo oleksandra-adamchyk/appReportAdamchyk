@@ -3,13 +3,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #6846ff;
+    background-color: #9cdbff;
 }
 
 header {
     padding: 20px;
     display: flex;
-    background-color: #6846ff;
+    background-color: #9cdbff;
     justify-content: space-between;
     align-items: center;
 }
@@ -27,7 +27,7 @@ header {
 
 
 nav {
-    background-color: #6846ff;
+    background-color: #9cdbff;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -76,9 +76,9 @@ main {
     gap: 20px;
 }
 
-/* Стиль для контенту */
+/* Content */
 .text-content {
-    background-color: #6846ff;
+    background-color: #9cdbff;
     padding: 20px;
     border-radius: 5px;
     margin: 0;
@@ -96,9 +96,9 @@ main {
     width: 1400px; /*Нерухомий фон під текст, наповнення лабораторних робіт*/
 }
 
-/* Стиль для sidebar */
+/* Sidebar */
 .sidebar {
-    background-color: #6846ff;
+    background-color: #9cdbff;
     width: 200px;
     display: flex;
     flex-direction: column;
