@@ -81,6 +81,7 @@ main {
 
 /* Content */
 .text-content {
+    font-family: Arial, sans-serif;
     background-color: #9cdbff;
     padding: 20px;
     border-radius: 5px;
@@ -91,9 +92,18 @@ main {
 
 .content-section {
     display: none;
-    width: 100%;
+    width: 90%;
 }
 
+a {
+    text-decoration: underline;
+    color: white;
+    font-weight: bold;
+}
+
+a:hover {
+color: blueviolet;
+}
 .content-section.active {
     display: flex;
     width: 1400px; /*Нерухомий фон під текст, наповнення лабораторних робіт*/
