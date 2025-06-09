@@ -192,6 +192,63 @@ main {
   margin: 20px auto;
 }
 
+
+.top-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.main-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+}
+
+/* Sidebar */
+.lab-wrapper {
+  display: flex;
+  margin-top: 20px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  /*  відступ, щоб кнопки були під першою верхньою */
+  margin-left: 37px; /* підбір значення вручну: ширина кнопки + margin */
+}
+/* Для кнопок однакового розміру */
+.sidebar button{
+  width: 166px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.top-nav button {
+padding: 10px 10px;
+  font-size: 14px;
+  min-width: auto;
+  width: auto;
+  white-space: nowrap;
+
+}
+
+.sidebar button.active-button,
+.top-nav button.active-button {
+  background-color: #0fe521;
+  color: #000;
+}
+
 /* Стиль для текстових блоків у секції структури */
 #structure p {
   white-space: pre-line;
