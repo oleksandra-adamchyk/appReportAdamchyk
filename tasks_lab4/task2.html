@@ -1,0 +1,33 @@
+<!-- Task 2 -->
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <section class="task">
+        <div class="container">
+          <input type="text" id="input1" placeholder="Текст 1" />
+          <input type="text" id="input2" placeholder="Текст 2" />
+          <button id="swapButton">SWAP ME</button>
+        </div>
+      </section>
+    </main>
+    <script>
+      // Task 2
+      document.getElementById("swapButton").addEventListener("click", () => {
+        const input1 = document.getElementById("input1");
+        const input2 = document.getElementById("input2");
+        const temp = input1.value;
+        input1.value = input2.value;
+        input2.value = temp;
+      });
+    </script>
+  </body>
+</html>

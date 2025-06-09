@@ -1,0 +1,41 @@
+<!-- Task 6 -->
+  <!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    </header>
+ <main>
+        <section class="task">
+            <h3>Варіант 6: Подвоєння значень списку</h3>
+            <div class="container">
+                <ul id="numberList">
+                    <li>1</li>
+                    <li>4</li>
+                    <li>8</li>
+                    <li>16</li>
+                    <li>20</li>
+                    <li>30</li>
+                </ul>
+                <button id="doubleButton">Подвоїти</button>
+            </div>
+            
+        </section>
+</main>
+<script>
+       // Task 6
+        document.getElementById('doubleButton').addEventListener('click', () => {
+            document.querySelectorAll('#numberList li').forEach(item => {
+                item.textContent = parseInt(item.textContent) * 2;
+            });
+        });
+
+        
+        </script>
+             </body>
+</html>

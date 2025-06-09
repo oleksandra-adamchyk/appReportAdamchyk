@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Звіти з лабораторних робіт</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-text">
+        <h1>Звіти з лабораторних робіт</h1>
+        <p>З дисципліни: Основи клієнтської розробки</p>
+        <p>Студентки групи ЗПІ-зп41 Адамчик Олександри</p>
+      </div>
+      <img
+        src="/images/avatars/image.png"
+        alt="Фото студента"
+        class="student-photo"
+      />
+    </header>
+
+    <!-- Навігація для вибору лабораторних робіт -->
+    <nav>
+      <button onclick="showLab('lab1')">Лабораторна робота 1</button>
+      <button onclick="showLab('lab1_2')">Лабораторна робота 1.2</button>
+      <button onclick="showLab('lab2')">Лабораторна робота 2</button>
+      <button onclick="showLab('lab2_2')">Лабораторна робота 2.2</button>
+      <button onclick="showLab('lab3')">Лабораторна робота 3</button>
+      <button onclick="showLab('lab3_2')">Лабораторна робота 3.2</button>
+      <button onclick="showLab('lab4')">Лабораторна робота 4</button>
+      <button onclick="showLab('lab5')">Лабораторна робота 5</button>
+      <button onclick="showLab('lab6')">Лабораторна робота 6</button>
+    </nav>
+
+    <main>
+      <!-- ЛР №4 -->
+      <div id="lab4" class="content-section">
+        <div class="sidebar">
+          <button onclick="showSection('goal4', 'lab4')">Тема ЛР№4</button>
+          <button onclick="showSection('tasks-4', 'lab4')">Завдання</button>
+          <button onclick="showSection('screenshots-4', 'lab4')">
+            Скріншоти
+          </button>
+          <button onclick="showSection('conclusions-4', 'lab4')">
+            Висновки
+          </button>
+        </div>
+
+        <div id="goal4" <div class="lab4-content-flex"
+      </div>
+          <!-- Ліва колонка: Тема + Мета -->
+          <div class="description">
+            <p>
+              <strong>Тема:</strong> КЛАСИ. ОБ'ЄКТНА МОДЕЛЬ ДОКУМЕНТА (DOM).
+              ПОДІЇ. ОБ'ЄКТ ПОДІЇ. ДЕЛЕГУВАННЯ ПОДІЙ. THROTTLE. МОДУЛЬНОСТЬ
+              КОДУ.
+            </p>
+            <p>
+              <strong>Мета:</strong> Придбати практичні навички роботи з
+              об'єктами, колбеками, стрілочними функціями, делегуванням подій та
+              реалізацією програм засобами JavaScript.
+            </p>
+          </div>
+
+          <!-- Права колонка: Посилання -->
+          <div class="links-column">
+            <a href="https://.../Practice_lab3_2/"
+              ><strong>Веб-сторінка практичного завдання</strong></a
+            >
+            <a href="https://oleksandra-adamchyk.github.io/appWebAdamchyk/#"
+              >Посилання на репозиторій на живу сторінку власного
+              WEB-застосунку</a
+            >
+            <a href="https://github.com/oleksandra-adamchyk/appWebAdamchyk/"
+              >Посилання на репозиторій власного WEB-застосунку</a
+            >
+            <a href="https://github.com/oleksandra-adamchyk/appReportAdamchyk/"
+              >Посилання на репозиторій звітного HTML-документа</a
+            >
+            <a href="https://oleksandra-adamchyk.github.io/appReportAdamchyk/"
+              >Посилання на репозиторій на живу сторінку звітного
+              HTML-документ</a
+            >
+            <a
+              href="https://github.com/oleksandra-adamchyk/appIndependentAdamchyk/"
+              >Посилання на репозиторій з самостійними роботами</a
+            >
+            <a
+              href="https://oleksandra-adamchyk.github.io/appIndependentAdamchyk/"
+              >Посилання на репозиторій живу сторінку з самостійними роботами</a
+            >
+          </div>
+        </div>
+
+        <div id="tasks-4" class="lab4-section content-section text-content">
+          <ul>
+            <li>
+              <a href="/tasks_lab4/task2.html" target="_blank">Завдання №2</a>
+            </li>
+            <li>
+              <a href="/tasks_lab4/task4.html" target="_blank">Завдання №4</a>
+            </li>
+            <li>
+              <a href="/tasks_lab4/task6.html" target="_blank">Завдання №6</a>
+            </li>
+            <li>
+              <a href="/tasks_lab4/task7.html" target="_blank">Завдання №7</a>
+            </li>
+            <li>
+              <a href="/tasks_lab4/task8.html" target="_blank">Завдання №8</a>
+            </li>
+            <li>
+              <a href="/tasks_lab4/task9.html" target="_blank">Завдання №9</a>
+            </li>
+            <li>
+              <a href="/tasks_lab4/task10.html" target="_blank">Завдання №10</a>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          id="screenshots-4"
+          class="lab4-section content-section text-content"
+        >
+          <h2>Скріншоти до виконаних завдань</h2>
+          <!-- Повторювані блоки -->
+          <div>
+            <h3>Завдання №2</h3>
+            <img src="img/task2-code.png" alt="Код завдання 2" />
+            <img
+              src="/images/screenshots/task2_screenshot.png"
+              alt="Результат завдання 2"
+            />
+          </div>
+          <!-- Повторити шаблон для інших -->
+        </div>
+
+        <div
+          id="conclusions-4"
+          class="lab4-section content-section text-content"
+        >
+          <h2>Висновки</h2>
+          <p>
+            Під час виконання завдань були закріплені навички роботи з класами,
+            DOM, обробкою та делегуванням подій, throttle та модульною
+            структурою коду.
+          </p>
+        </div>
+      </div>
+
+      <!-- ЛР №5 -->
+      <div id="lab5" class="content-section">
+        <div class="sidebar">
+          <button onclick="showSection('goal5', 'lab5')">Тема ЛР№5</button>
+          <button onclick="showSection('tasks-5', 'lab5')">Завдання</button>
+          <button onclick="showSection('screenshots-5', 'lab5')">
+            Скріншоти
+          </button>
+          <button onclick="showSection('conclusions-5', 'lab5')">
+            Висновки
+          </button>
+        </div>
+
+        <div id="goal5" class="lab5-section content-section text-content">
+          <p>
+            <strong>Тема:</strong> WEB-СХОВИЩЕ. WEB STORAGE API. МОДУЛЬНОСТЬ
+            КОДУ. СТВОРЕННЯ МОДАЛЬНОГО ВІКНА.
+          </p>
+          <p>
+            <strong>Мета:</strong> Придбати навички використання Web Storage
+            API, створення модального вікна, делегування подій та структурування
+            коду.
+          </p>
+        </div>
+
+        <div id="tasks-5" class="lab5-section content-section text-content">
+          <ul>
+            <li>
+              <a href="/tasks_lab5/task1.html" target="_blank">Завдання №1</a>
+            </li>
+            <li>
+              <a href="/tasks_lab5/task2.html" target="_blank">Завдання №2</a>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          id="screenshots-5"
+          class="lab5-section content-section text-content"
+        >
+          <h2>Скріншоти до виконаних завдань</h2>
+          <div>
+            <h3>Завдання №1</h3>
+            <img src="img/task1-5-code.png" alt="Код завдання 1 ЛР5" />
+            <img
+              src="/images/screenshots/task1-5_screenshot.png"
+              alt="Результат завдання 1 ЛР5"
+            />
+          </div>
+          <div>
+            <h3>Завдання №2</h3>
+            <img src="img/task2-5-code.png" alt="Код завдання 2 ЛР5" />
+            <img
+              src="/images/screenshots/task2-5_screenshot.png"
+              alt="Результат завдання 2 ЛР5"
+            />
+          </div>
+        </div>
+
+        <div
+          id="conclusions-5"
+          class="lab5-section content-section text-content"
+        >
+          <h2>Висновки</h2>
+          <p>
+            Опрацьовано Web Storage API, реалізовано модальне вікно, використано
+            делегування подій та розбивку коду на модулі.
+          </p>
+        </div>
+      </div>
+
+      <!-- ЛР №6 -->
+      <div id="lab6" class="content-section">
+        <div class="sidebar">
+          <button onclick="showSection('goal6', 'lab6')">Тема ЛР№6</button>
+          <button onclick="showSection('tasks-6', 'lab6')">Завдання</button>
+          <button onclick="showSection('screenshots-6', 'lab6')">
+            Скріншоти
+          </button>
+          <button onclick="showSection('conclusions-6', 'lab6')">
+            Висновки
+          </button>
+        </div>
+
+        <div id="goal6" class="lab6-section content-section text-content">
+          <p>
+            <strong>Тема:</strong> ПОДІЇ КЛАВІАТУРИ. ФОРМА. ПОДІЇ ІНПУТІВ.
+            ФОРМАТУВАННЯ ВВЕДЕНИХ ДАНИХ.
+          </p>
+          <p>
+            <strong>Мета:</strong> Закріпити навички роботи з подіями
+            клавіатури, формами, валідацією введення та обробкою даних із форм.
+          </p>
+        </div>
+
+        <div id="tasks-6" class="lab6-section content-section text-content">
+          <ul>
+            <li>
+              <a href="/tasks_lab6/task1.html" target="_blank">Завдання №1</a>
+            </li>
+            <li>
+              <a href="/tasks_lab6/task2.html" target="_blank">Завдання №2</a>
+            </li>
+            <li>
+              <a href="/tasks_lab6/task3.html" target="_blank">Завдання №3</a>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          id="screenshots-6"
+          class="lab6-section content-section text-content"
+        >
+          <h2>Скріншоти до виконаних завдань</h2>
+          <div>
+            <h3>Завдання №1</h3>
+            <img src="img/task1-6-code.png" alt="Код завдання 1 ЛР6" />
+            <img
+              src="/images/screenshots/task1-6_screenshot.png"
+              alt="Результат завдання 1 ЛР6"
+            />
+          </div>
+          <div>
+            <h3>Завдання №2</h3>
+            <img src="img/task2-6-code.png" alt="Код завдання 2 ЛР6" />
+            <img
+              src="/images/screenshots/task2-6_screenshot.png"
+              alt="Результат завдання 2 ЛР6"
+            />
+          </div>
+          <div>
+            <h3>Завдання №3</h3>
+            <img src="img/task3-6-code.png" alt="Код завдання 3 ЛР6" />
+            <img
+              src="/images/screenshots/task3-6_screenshot.png"
+              alt="Результат завдання 3 ЛР6"
+            />
+          </div>
+        </div>
+
+        <div
+          id="conclusions-6"
+          class="lab6-section content-section text-content"
+        >
+          <h2>Висновки</h2>
+          <p>
+            Було опрацьовано події клавіатури, реалізовано обробку введення
+            даних у форму, валідацію та форматування. Застосовано практики
+            інтерактивної взаємодії користувача з інтерфейсом.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function showLab(labId) {
+        document
+          .querySelectorAll(".content-section")
+          .forEach((lab) => lab.classList.remove("active"));
+        document.getElementById(labId).classList.add("active");
+      }
+
+      function showSection(sectionId, labId) {
+        const sections = document
+          .getElementById(labId)
+          .querySelectorAll(`.${labId}-section`);
+        sections.forEach((section) => (section.style.display = "none"));
+        document
+          .getElementById(labId)
+          .querySelectorAll(`.${labId}-section`).style.display = "block";
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        showLab("lab4");
+        showSection("goal4", "lab4");
+      });
+
+      document.querySelectorAll(".sidebar button").forEach((button) => {
+        button.addEventListener("click", () => {
+          button.parentNode
+            .querySelectorAll("button")
+            .forEach((btn) => btn.classList.remove("active-button"));
+          button.classList.add("active-button");
+        });
+      });
+
+      document.querySelectorAll("nav button").forEach((button) => {
+        button.addEventListener("click", () => {
+          document
+            .querySelectorAll("nav button")
+            .forEach((btn) => btn.classList.remove("active-button"));
+          button.classList.add("active-button");
+        });
+      });
+    </script>
+  </body>
+</html>

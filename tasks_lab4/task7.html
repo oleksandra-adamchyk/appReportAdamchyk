@@ -1,0 +1,49 @@
+<!-- Task 7 -->
+  <!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    </header>
+ <main>
+        <section class="task">
+            <h3>Варіант 7: Аналіз списку категорій</h3>
+            <div class="container">
+                <ul id="categories">
+                    <li class="item">
+                        <h4>Animals</h4>
+                        <ul><li>Cat</li><li>Hamster</li><li>Horse</li><li>Parrot</li></ul>
+                    </li>
+                    <li class="item">
+                        <h4>Products</h4>
+                        <ul><li>Bread</li><li>Parsley</li><li>Cheese</li></ul>
+                    </li>
+                    <li class="item">
+                        <h4>Technologies</h4>
+                        <ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>Node.js</li></ul>
+                    </li>
+                </ul>
+            </div>
+           
+        </section>
+</main>
+        <script>
+
+// Task 7
+        
+        const categories = document.querySelectorAll('#categories .item');
+        console.log(`Number of categories: ${categories.length}`);
+        categories.forEach(category => {
+            const title = category.querySelector('h4').textContent;
+            const items = category.querySelectorAll('ul li').length;
+            console.log(`Category: ${title}\nElements: ${items}`);
+        });
+
+        </script>
+             </body>
+</html>

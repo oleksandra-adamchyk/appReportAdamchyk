@@ -1,0 +1,48 @@
+<!-- Task 8 -->
+  <!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    </header>
+ <main>
+        <section class="task">
+            <h3>Варіант 8: Управління формою логіна</h3>
+            <div class="container">
+                <form class="login-form">
+                    <label>
+                        Email
+                        <input type="email" name="email" />
+                    </label>
+                    <label>
+                        Password
+                        <input type="password" name="password" />
+                    </label>
+                    <button type="submit">Log in</button>
+                </form>
+            </div>
+            
+        </section>
+</main>
+<script>
+         // Task 8
+        document.querySelector('.login-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const form = event.target;
+            const email = form.elements.email.value.trim();
+            const password = form.elements.password.value.trim();
+            if (!email || !password) {
+                alert('All form fields must be filled in');
+                return;
+            }
+            const data = { email, password };
+            console.log(data);
+            form.reset();
+        });</script>
+            </body>
+</html>

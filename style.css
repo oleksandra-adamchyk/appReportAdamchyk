@@ -1,151 +1,212 @@
-
+/* Загальний стиль для сторінки */
 body {
-    font-family: Arial, sans-serif;
-    padding: 0;
-    background-color: #9cdbff;
+  font-family: Arial, sans-serif;
+  color: #000000;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  height: auto;
+  overflow-y: auto;
 }
 
+/* Стиль для шапки */
 header {
-    margin-top: 70px;
-    background-color: #9cdbff;
-    margin-bottom: 5%;
+  padding: 20px;
+  display: flex;
+  background-color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-text {
-    max-width: 100%;
-    text-align: center;
+  max-width: 80%;
 }
-
 
 .student-photo {
-    width: 140px;
-    height: 170px;
-    border-radius: 20%;
-    position: absolute;
-    right: 200px; /* Відступ з правого боку */
-    top: 20%; /*Розміщуємо по центру по вертикалі */
-    transform: translateY(-50%); /* Вирівнюємо по центру по вертикалі */
-    
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  margin-left: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 
-
+/* Стиль для навігації */
 nav {
-    background-color: #9cdbff;
-    padding: 10px;
-    display: flex;
-    gap: 10px;
-    
+  background-color: #ffffff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 nav button {
-  --bg: #f8f6f6;
-  --hover-bg: #ff90e8;
-  --hover-text: #000;
-  color: #000;
+  background-color: #000000;
+  color: #efece7;
+  border: 1px solid #ffffff;
+  padding: 10px 15px;
+  margin: 5px;
   cursor: pointer;
-  border: 1px solid var(--bg);
-  border-radius: 50px;
-  padding: 0.8em 2em;
-  margin: auto;
-  background: var(--bg);
-  transition: 0.2s;
+  border-radius: 12px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 nav button:hover {
-  color: var(--hover-text);
-  transform: translate(-0.25rem, -0.25rem);
-  background: var(--hover-bg);
-  box-shadow: 0.25rem 0.25rem var(--bg);
+  background-color: #0fe521;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgb(71, 70, 70);
 }
 
-nav button:active {
-  transform: translate(0);
-  box-shadow: none;
+nav button.active-button {
+  background-color: #0fe521;
+  color: #000000;
+  box-shadow: 0 4px 10px rgb(71, 70, 70);
 }
-
 
 /* Основний контейнер */
 main {
-    display: flex;
-    padding: 20px;
+  display: block;
+  padding: 20px;
 }
 
 /* Стиль для зображень */
 .screen-img {
-    max-width: 60%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    gap: 20px;
+  max-width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  gap: 20px;
 }
 
-/* Content */
+/* Стиль для контенту */
 .text-content {
-    font-family: Arial, sans-serif;
-    background-color: #9cdbff;
-    padding: 20px;
-    border-radius: 5px;
-    margin: 0;
-    width: 100%;
-    box-sizing: border-box;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .content-section {
-    display: none;
-    width: 90%;
+  display: none;
+  width: 100%;
+  min-height: auto;
+  overflow: visible;
 }
 
-a {
-    text-decoration: underline;
-    color: white;
-    font-weight: bold;
-}
-
-a:hover {
-color: blueviolet;
-}
 .content-section.active {
-    display: flex;
-    width: 1400px; /*Нерухомий фон під текст, наповнення лабораторних робіт*/
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
 }
 
+/* Блок для теми + посилань */
+.lab4-content-flex {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lab5-content-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.description {
+  max-width: 60%;
+}
+
+.links-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.links-column a {
+  text-decoration: none;
+  color: blue;
+  font-weight: normal;
+}
+
+.links-column a:hover {
+  text-decoration: underline;
+}
+
+/* Стиль для sidebar */
 /* Sidebar */
 .sidebar {
-    background-color: #9cdbff;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-    
+  display: flex;
+  flex-direction: column; /* <<< ВАЖЛИВО: забезпечує вертикальне розміщення */
+  gap: 10px;
+  width: 200px;
+  flex-shrink: 0;
 }
 
 .sidebar button {
-    --bg: #f8f6f6;
-  --hover-bg: #ff90e8;
-  --hover-text: #000;
-  color: #000;
+  background-color: #000000;
+  color: #efece7;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
   cursor: pointer;
-  border: 1px solid var(--bg);
-  border-radius: 25px;
-  padding: 0.8em 2em;
-  margin: 10px 0;
-  background: var(--bg);
-  transition: 0.2s;
+  border-radius: 12px;
 }
 
 .sidebar button:hover {
-    color: var(--hover-text);
-    transform: translate(-0.25rem, -0.25rem);
-    background: var(--hover-bg);
-    box-shadow: 0.25rem 0.25rem var(--bg);
+  background-color: #252626;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .sidebar button.active-button {
-    transform: translate(0);
-  box-shadow: none;
+  background-color: #0fe521;
+  color: #1a202c;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.screenshot-wrapper img {
+  width: 600px;
+  height: auto;
+}
+
+.screenshot {
+  width: 600px;
+  height: auto;
+  border: 2px solid #555;
+  border-radius: 6px;
+  padding: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin: 20px auto;
 }
 
 /* Стиль для текстових блоків у секції структури */
 #structure p {
-    white-space: pre-line;
+  white-space: pre-line;
+}
+
+/* Стилізація скролбару */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #eee;
 }

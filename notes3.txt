@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Звіти з лабораторних робіт</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-text">
+        <h1>Звіти з лабораторних робіт</h1>
+        <p>З дисципліни: Основи клієнтської розробки</p>
+        <p>Студентки групи ЗПІ-зп41 Адамчик Олександри</p>
+      </div>
+      <img
+        src="/images/avatars/image.png"
+        alt="Фото студента"
+        class="student-photo"
+      />
+    </header>
+
+    <!-- Навігація -->
+    <nav>
+      <button onclick="showLab('lab1')">Лабораторна робота 1</button>
+      <button onclick="showLab('lab1_2')">Лабораторна робота 1.2</button>
+      <button onclick="showLab('lab2')">Лабораторна робота 2</button>
+      <button onclick="showLab('lab2_2')">Лабораторна робота 2.2</button>
+      <button onclick="showLab('lab3')">Лабораторна робота 3</button>
+      <button onclick="showLab('lab3_2')">Лабораторна робота 3.2</button>
+      <button onclick="showLab('lab4')">Лабораторна робота 4</button>
+      <button onclick="showLab('lab5')">Лабораторна робота 5</button>
+      <button onclick="showLab('lab6')">Лабораторна робота 6</button>
+    </nav>
+
+    <main>
+      <!-- ЛР №4 -->
+      <div id="lab4" class="content-section">
+        <div class="sidebar">
+          <button onclick="showSection('goal4', 'lab4')">Тема ЛР№4</button>
+          <button onclick="showSection('tasks-4', 'lab4')">Завдання</button>
+          <button onclick="showSection('screenshots-4', 'lab4')">
+            Скріншоти
+          </button>
+          <button onclick="showSection('conclusions-4', 'lab4')">
+            Висновки
+          </button>
+        </div>
+
+        <div class="lab4-content-flex">
+          <div id="goal4" class="lab4-section content-section text-content">
+            <div class="description">
+              <p>
+                <strong>Тема:</strong> КЛАСИ. DOM. ПОДІЇ. ОБ'ЄКТ ПОДІЇ.
+                ДЕЛЕГУВАННЯ. THROTTLE. МОДУЛІ.
+              </p>
+              <p>
+                <strong>Мета:</strong> Практика з об'єктами, функціями, подіями
+                та модульністю у JavaScript.
+              </p>
+            </div>
+            <div class="links-column">
+              <a href="https://.../Practice_lab3_2/"
+                ><strong>Веб-сторінка практичного завдання</strong></a
+              >
+              <a href="https://oleksandra-adamchyk.github.io/appWebAdamchyk/#"
+                >WEB-застосунок (живе посилання)</a
+              >
+              <a href="https://github.com/oleksandra-adamchyk/appWebAdamchyk/"
+                >Репозиторій WEB-застосунку</a
+              >
+              <a
+                href="https://github.com/oleksandra-adamchyk/appReportAdamchyk/"
+                >Репозиторій HTML-документу</a
+              >
+              <a href="https://oleksandra-adamchyk.github.io/appReportAdamchyk/"
+                >Жива сторінка HTML-документу</a
+              >
+              <a
+                href="https://github.com/oleksandra-adamchyk/appIndependentAdamchyk/"
+                >Репозиторій самостійних</a
+              >
+              <a
+                href="https://oleksandra-adamchyk.github.io/appIndependentAdamchyk/"
+                >Жива сторінка самостійних</a
+              >
+            </div>
+          </div>
+
+          <div id="tasks-4" class="lab4-section content-section text-content">
+            <ul>
+              <li>
+                <a href="/tasks_lab4/task2.html" target="_blank">Завдання №2</a>
+              </li>
+              <li>
+                <a href="/tasks_lab4/task4.html" target="_blank">Завдання №4</a>
+              </li>
+              <li>
+                <a href="/tasks_lab4/task6.html" target="_blank">Завдання №6</a>
+              </li>
+              <li>
+                <a href="/tasks_lab4/task7.html" target="_blank">Завдання №7</a>
+              </li>
+              <li>
+                <a href="/tasks_lab4/task8.html" target="_blank">Завдання №8</a>
+              </li>
+              <li>
+                <a href="/tasks_lab4/task9.html" target="_blank">Завдання №9</a>
+              </li>
+              <li>
+                <a href="/tasks_lab4/task10.html" target="_blank"
+                  >Завдання №10</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div
+            id="screenshots-4"
+            class="lab4-section content-section text-content"
+          >
+            <h2>Скріншоти до виконаних завдань</h2>
+            <div>
+              <h3>Завдання №2</h3>
+              <img src="img/task2-code.png" alt="Код завдання 2" />
+              <img
+                src="/images/screenshots/task2_screenshot.png"
+                alt="Результат завдання 2"
+              />
+            </div>
+          </div>
+
+          <div
+            id="conclusions-4"
+            class="lab4-section content-section text-content"
+          >
+            <h2>Висновки</h2>
+            <p>
+              Закріплено навички роботи з класами, DOM, подіями, throttle і
+              модульною структурою.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function showLab(labId) {
+        document.querySelectorAll(".content-section").forEach((lab) => {
+          lab.classList.remove("active");
+        });
+        document.getElementById(labId).classList.add("active");
+      }
+
+      function showSection(sectionId, labId) {
+        const sections = document
+          .getElementById(labId)
+          .querySelectorAll(`.${labId}-section`);
+        sections.forEach((section) => {
+          section.style.display = "none";
+        });
+        document
+          .getElementById(labId)
+          .querySelector(`#${sectionId}`).style.display = "block";
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        showLab("lab4");
+        showSection("goal4", "lab4");
+      });
+
+      document.querySelectorAll(".sidebar button").forEach((button) => {
+        button.addEventListener("click", () => {
+          button.parentNode.querySelectorAll("button").forEach((btn) => {
+            btn.classList.remove("active-button");
+          });
+          button.classList.add("active-button");
+        });
+      });
+
+      document.querySelectorAll("nav button").forEach((button) => {
+        button.addEventListener("click", () => {
+          document.querySelectorAll("nav button").forEach((btn) => {
+            btn.classList.remove("active-button");
+          });
+          button.classList.add("active-button");
+        });
+      });
+    </script>
+  </body>
+</html>
+
+
+/* Загальний стиль для сторінки */
+body {
+  font-family: Arial, sans-serif;
+  color: #000000;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  height: auto;
+  overflow-y: auto;
+}
+
+/* Стиль для шапки */
+header {
+  padding: 20px;
+  display: flex;
+  background-color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-text {
+  max-width: 80%;
+}
+
+.student-photo {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  margin-left: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+/* Стиль для навігації */
+nav {
+  background-color: #ffffff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav button {
+  background-color: #000000;
+  color: #efece7;
+  border: 1px solid #ffffff;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav button:hover {
+  background-color: #0fe521;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgb(71, 70, 70);
+}
+
+nav button.active-button {
+  background-color: #0fe521;
+  color: #000000;
+  box-shadow: 0 4px 10px rgb(71, 70, 70);
+}
+
+/* Основний контейнер */
+main {
+  display: block;
+  padding: 20px;
+}
+
+/* Стиль для зображень */
+.screen-img {
+  max-width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+/* Стиль для контенту */
+.text-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.content-section {
+  display: none;
+  width: 100%;
+  min-height: auto;
+  overflow: visible;
+}
+
+.content-section.active {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* Блок для теми + посилань */
+.lab4-content-flex {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.description {
+  max-width: 60%;
+}
+
+.links-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.links-column a {
+  text-decoration: none;
+  color: blue;
+  font-weight: normal;
+}
+
+.links-column a:hover {
+  text-decoration: underline;
+}
+
+/* Стиль для sidebar */
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column; /* <<< ВАЖЛИВО: забезпечує вертикальне розміщення */
+  gap: 10px;
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.sidebar button {
+  background-color: #000000;
+  color: #efece7;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.sidebar button:hover {
+  background-color: #252626;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar button.active-button {
+  background-color: #0fe521;
+  color: #1a202c;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Стиль для текстових блоків у секції структури */
+#structure p {
+  white-space: pre-line;
+}
+
+/* Стилізація скролбару */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+
+

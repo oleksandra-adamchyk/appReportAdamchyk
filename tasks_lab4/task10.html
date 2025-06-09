@@ -1,0 +1,76 @@
+<!-- Task 10 -->
+  <!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    </header>
+ <main>
+        <section class="task">
+            <h3>Варіант 10: Створення/очищення елементів</h3>
+            <div class="container">
+                <div id="controls">
+                    <input type="number" min="1" max="100" placeholder="1-100">
+                    <button data-create>Create</button>
+                    <button data-destroy>Destroy</button>
+                </div>
+                <div id="boxes"></div>
+            </div>
+            
+        </section>
+</main>
+<script>
+         // Task 10
+        document.addEventListener('DOMContentLoaded', () => {
+            const createBoxes = (amount) => {
+                console.log('Creating boxes:', amount);
+                const boxes = document.getElementById('boxes');
+                boxes.innerHTML = '';
+                const fragment = document.createDocumentFragment();
+                for (let i = 0; i < amount; i++) {
+                    const size = 30 + i * 10;
+                    const box = document.createElement('div');
+                    box.style.cssText = `width: ${size}px; height: ${size}px; background: ${getRandomHexColor()};`;
+                    fragment.appendChild(box);
+                }
+                boxes.appendChild(fragment);
+            };
+            const throttle = (func, delay) => {
+                let lastCall = 0;
+                return (...args) => {
+                    const now = new Date().getTime();
+                    if (now - lastCall < delay) return;
+                    lastCall = now;
+                    return func(...args);
+                };
+            };
+            const input = document.querySelector('#controls input');
+            const createButton = document.querySelector('[data-create]');
+            const destroyButton = document.querySelector('[data-destroy]');
+            if (createButton && destroyButton) {
+                createButton.addEventListener('click', throttle(() => {
+                    const amount = parseInt(input.value);
+                    console.log('Create clicked, amount:', amount);
+                    if (isNaN(amount) || amount < 1 || amount > 100) {
+                        console.log('Invalid input');
+                        return;
+                    }
+                    createBoxes(amount);
+                    input.value = '';
+                }, 500));
+                destroyButton.addEventListener('click', throttle(() => {
+                    console.log('Destroy clicked');
+                    document.getElementById('boxes').innerHTML = '';
+                }, 500));
+            } else {
+                console.error('Create or Destroy button not found');
+            }
+        });
+        </script>
+           </body>
+</html>  

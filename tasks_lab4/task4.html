@@ -1,0 +1,43 @@
+ <!-- Task 4 -->
+   <!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    </header>
+  <main>
+        <section class="task">
+            <h3>Варіант 4: Зміна розміру блоку</h3>
+            <div class="container">
+                <div id="resizeBox" style="width: 100px; height: 100px; background: #007bff;"></div>
+                <button id="increaseButton">Збільшити</button>
+                <button id="decreaseButton">Зменшити</button>
+            </div>
+            
+        </section>
+        </main>
+<script>
+       // Task 4
+        const resizeBox = document.getElementById('resizeBox');
+        document.getElementById('increaseButton').addEventListener('click', () => {
+            const w = parseInt(resizeBox.style.width);
+            const h = parseInt(resizeBox.style.height);
+            resizeBox.style.width = `${w + 10}px`;
+            resizeBox.style.height = `${h + 10}px`;
+        });
+        document.getElementById('decreaseButton').addEventListener('click', () => {
+            const w = parseInt(resizeBox.style.width);
+            const h = parseInt(resizeBox.style.height);
+            if (w > 10 && h > 10) {
+                resizeBox.style.width = `${w - 10}px`;
+                resizeBox.style.height = `${h - 10}px`;
+            }
+        });
+       </script>
+             </body>
+</html>

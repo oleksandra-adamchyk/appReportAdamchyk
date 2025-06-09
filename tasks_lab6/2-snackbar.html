@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Generator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css">
+    <style>
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 300px;
+            margin: 20px;
+        }
+        label, fieldset {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        button {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        input[type="number"] {
+            padding: 8px;
+            font-size: 1em;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        legend {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form class="form">
+        <label>
+            Delay (ms)
+            <input type="number" name="delay" min="0" required />
+        </label>
+        <fieldset>
+            <legend>State</legend>
+            <label>
+                <input type="radio" name="state" value="fulfilled" required />
+                Fulfilled
+            </label>
+            <label>
+                <input type="radio" name="state" value="rejected" required />
+                Rejected
+            </label>
+        </fieldset>
+        <button type="submit">Create notification</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+    <script src="2-snackbar.js"></script>
+</body>
+</html>
