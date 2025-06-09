@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Форма зворотного зв’язку</title>
-  <link rel="stylesheet" href="css/2-form.css">
-</head>
-<body>
-  <form class="feedback-form" autocomplete="off">
-    <label>
-      Email
-      <input type="email" name="email" autofocus />
-    </label>
-    <label>
-      Message
-      <textarea name="message" rows="8"></textarea>
-    </label>
-    <button type="submit">Submit</button>
-  </form>
-  <script src="js/2-form.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Галерея зображень</title>
+    <!-- Підключення стилів basicLightbox через CDN jsDelivr -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+    />
+    <link rel="stylesheet" href="1-gallery.css" />
+  </head>
+  <body>
+    <ul class="gallery"></ul>
+    <!-- Підключення basicLightbox через CDN jsDelivr -->
+    <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+    <script src="1-gallery.js"></script>
+  </body>
 </html>

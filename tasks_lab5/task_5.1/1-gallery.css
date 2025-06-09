@@ -1,23 +1,34 @@
+
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Адаптивна сітка */
-  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 16px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   list-style: none;
-  width: 100vw; /* Ширина на всю сторінку */
-  height: 100vh; /* Висота на всю сторінку */
+  max-width: 600px;
   box-sizing: border-box;
 }
 
 .gallery li {
+  aspect-ratio: 1 / 1;
   width: 100%;
-  height: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .gallery img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Зображення заповнює контейнер */
+  object-fit: cover;
   cursor: pointer;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+.gallery img:hover {
+  transform: scale(1.05);
 }
